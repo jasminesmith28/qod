@@ -34,7 +34,6 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
 <?php endif; ?>
 	
-	
 
 </article><!-- #post-## -->
 
