@@ -13,11 +13,11 @@ get_header(); ?>
 
 		<section>
 			<header>
-			<?php the_title(); ?>
+			<h1><?php the_title(); ?></h1>
 			</header> 
 
 			<?php  if (is_user_logged_in() && current_user_can( 'edit_posts' )) : ?>
-		<section>
+		<section class="form">
 		 <form id="submit-quote">
 		    <p>Author of the quote:</p>
 			<input type="text" id="author-quote" />

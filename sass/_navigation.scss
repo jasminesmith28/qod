@@ -5,11 +5,8 @@
 /* Links */
 
 a {
-	color: $color__link;
+	color: $color__text-screen;
 
-	&:visited {
-		color: $color__link-visited;
-	}
 	&:focus {
 		outline: thin dotted;
 	}
@@ -21,51 +18,25 @@ a {
 
 /* Menus */
 
+.site-info{
+	margin: 4.5rem 0 3rem;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
 	}
+		
 	li {
 		float: left;
 		position: relative;
+		margin: 0 2%;
 	}
 	a {
 		display: block;
@@ -102,11 +73,16 @@ a {
 	display: flex;
 	justify-content: center;
 
+	@include tablet{
+		justify-content: flex-start;
+		margin: 0 2%;
+	}
+
 	img{
 		width: 300px;
 
 	@include tablet{
-		width: 450px;
+		width: 330px;
 	}
 
 	@include desktop{

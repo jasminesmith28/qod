@@ -416,51 +416,43 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+#submit-quote input {
+  border: 2px solid;
+  border-color: #00cc00;
+  border-radius: 3px;
+  background: transparent;
+  color: #00cc00;
+  font-size: .75rem;
+  line-height: 1;
+  padding: 1rem 3rem; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
+  color: #00cc00; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
 
 /* Menus */
+.site-info {
+  margin: 4.5rem 0 3rem; }
+
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    margin: 0 2%; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -492,11 +484,17 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (min-width: 600px) {
+    .qodlogo {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin: 0 2%; } }
   .qodlogo img {
     width: 300px; }
     @media (min-width: 600px) {
       .qodlogo img {
-        width: 450px; } }
+        width: 330px; } }
     @media (min-width: 1080px) {
       .qodlogo img {
         width: 750px; } }
@@ -614,7 +612,9 @@ body {
 .authorSource {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .authorSource .entry-meta {
     margin: 0 1% 0 3%; }
   .authorSource p {
@@ -624,5 +624,12 @@ body {
   margin: 0 5%;
   font-size: 1rem; }
 
+/* About Page */
+.page h1 {
+  margin: 8% 4%; }
+
 /* All Archives Page */
+.archive {
+  margin: 0 2%; }
+
 /* Submit a Quote Page */

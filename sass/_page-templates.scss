@@ -7,13 +7,39 @@ body{
 
 /* Home Page */
 
+// article{
+//     display: flex;
+//     position: relative;
+//     &:before,
+//     &:after{
+//         font-family: 'FontAwesome';
+//         font-size: 125px;
+//         // position: absolute;
+//         top: 0;
+//         overflow: hidden;
+//         line-height: 125px;
+
+//     }
+
+//     &:before {
+//         content: '\f10d';
+//         left: 0;
+//     }
+
+//     &:after {
+//         content: '\f10e';
+//         bottom: 0;
+//         right: 0;
+//     }
+// }
 
 .entry-content{
         margin: 0 4%;
-    }
+}
 
 .authorSource{
     display: flex;
+    flex-wrap: wrap;
     
     .entry-meta{
         margin: 0 1% 0 3%;
@@ -31,8 +57,21 @@ body{
     }
 }
 
+/* About Page */
+
+.page{
+    h1{
+        margin: 8% 4%;  
+    }
+}
+
 
 /* All Archives Page */
+
+.archive{
+   margin: 0 2%;
+}
+
 
 
 

@@ -10,9 +10,11 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_id' => 'primary-menu' ) ); ?>
 				</nav>
+				</div>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
