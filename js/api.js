@@ -40,31 +40,40 @@ $('#newQuoteButton').on('click', function(event) {
 
     $(function() {
         // Event on submit of the form
-        const data = {
-            title: $('#title-quote').val(),
-            content: $('#quote-content').val(),
-            _qod_quote_source: $('#quote-source').val(),
-            _qod_quote_source_url: $('#quote-source-url').val(),
-            post_status: 'pending'
-          };
-        $('form').on('submit', function() {
-            $ajax({
+        $('#submit-quote').on('submit', function(event) {
+            event.preventDefault(); 
+            const data = {
+                title: $('#author-quote').val(),
+                content: $('#quote').val(),
+                _qod_quote_source: $('#quote-source').val(),
+                _qod_quote_source_url: $('#quote-source-url').val(),
+                post_status: 'pending'
+              }
+            $.ajax({
                 method: 'POST',
                 url: api_vars.root_url + 'wp/v2/posts',
-                data,
+                data, 
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
                 }
 
-            }).done(function() {
-                // clear the form fields and hide the form
-                //Use jquey so hide the form in a slidey way
+            }).done(function(data, statusText, xhr) {
+                $('#submit-quote')
+                .slideUp()
+                .val('');
+
+                var status = xhr.status;
+
+                if(status == 201){$('section').text(api_vars.success)};
+                
+                
 
                 //show success message using the var from functions.php
 
 
             }).fail(function() {
                 // post and alert wih failure var from functions.php
+                $('#submit-quote').text(api_vars.failure);
             })
         });
     });
