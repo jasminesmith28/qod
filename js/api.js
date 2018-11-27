@@ -21,7 +21,7 @@ $('#newQuoteButton').on('click', function(event) {
             slug = post.slug;
 
         $('.entry-content').html(content);
-        $('.entry-meta').html('<h2>' + title + '</h2>');
+        $('.entry-meta').html('<p> - ' + title + '<p>');
         $('.source').html('<span class="source"><a href="'+sourceUrl+'">'+quoteSource+'</a></span>');
 
         });

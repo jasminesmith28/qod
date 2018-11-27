@@ -12,11 +12,24 @@ body{
         margin: 0 4%;
     }
 
-.entry-meta{
-        margin: 0 4%;  
+.authorSource{
+    display: flex;
+    
+    .entry-meta{
+        margin: 0 1% 0 3%;
     }
 
+    p{
+        margin: auto;
+    }
+}
 
+.content-area{
+    button{
+        margin:0 5%;
+        font-size: 1rem;
+    }
+}
 
 
 /* All Archives Page */
