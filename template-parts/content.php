@@ -16,7 +16,7 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 <?php the_content(); ?>
 </div><!-- .entry-content -->
 <div class="entry-meta">
-<h2><?php the_title(); ?></h2>
+<p><?php the_title(); ?></p>
 </div>
 	
 	

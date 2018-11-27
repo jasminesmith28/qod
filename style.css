@@ -221,6 +221,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-MediumItalic.eot");
+  src: url("../../assets/fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../assets/fonts/Exo-MediumItalic.woff") format("woff"), url("../../assets/fonts/Exo-MediumItalic.ttf") format("truetype"), url("../../assets/fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-Medium.eot");
+  src: url("../../assets/fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-Medium.woff2") format("woff2"), url("../../assets/fonts/Exo-Medium.woff") format("woff"), url("../../assets/fonts/Exo-Medium.ttf") format("truetype"), url("../../assets/fonts/Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-LightItalic.eot");
+  src: url("../../assets/fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Exo-LightItalic.woff") format("woff"), url("../../assets/fonts/Exo-LightItalic.ttf") format("truetype"), url("../../assets/fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-Light.eot");
+  src: url("../../assets/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-Light.woff2") format("woff2"), url("../../assets/fonts/Exo-Light.woff") format("woff"), url("../../assets/fonts/Exo-Light.ttf") format("truetype"), url("../../assets/fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -230,7 +258,8 @@ input,
 select,
 textarea {
   color: #ffffff;
-  font-family: sans-serif;
+  font-family: "Exo";
+  font-weight: 100;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -489,6 +518,23 @@ a {
   text-align: right;
   width: 50%; }
 
+.qodlogo {
+  padding-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .qodlogo img {
+    width: 300px; }
+    @media (min-width: 600px) {
+      .qodlogo img {
+        width: 450px; } }
+    @media (min-width: 1080px) {
+      .qodlogo img {
+        width: 750px; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -505,7 +551,7 @@ a {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #28c908;
+    color: #00cc00;
     display: block;
     font-size: .875rem;
     font-weight: bold;
@@ -596,5 +642,11 @@ body {
   background-color: #242323; }
 
 /* Home Page */
+.entry-content {
+  margin: 0 4%; }
+
+.entry-meta {
+  margin: 0 4%; }
+
 /* All Archives Page */
 /* Submit a Quote Page */

@@ -64,11 +64,11 @@ $('#newQuoteButton').on('click', function(event) {
 
                 var status = xhr.status;
 
-                if(status == 201){$('section').text(api_vars.success)};
-                
-                
-
                 //show success message using the var from functions.php
+                if(status == 201){
+                    $('section').text(api_vars.success)};
+                
+            
 
 
             }).fail(function() {
