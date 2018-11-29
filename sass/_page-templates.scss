@@ -13,59 +13,49 @@ body{
             margin: 5% 15%;
         }
     }
-    
-}
 
 
-main{
+article{
+
     @include desktop{
-    display: flex;
     position: relative;
     }
-    @include desktop{
-        &:before,
-        &:after{
+    
+    &:before,
+    &:after{
+        @include desktop {
             font-family: 'FontAwesome';
             font-size: 125px;
             position: absolute;
             top: 0;
             overflow: hidden;
             line-height: 125px;
-        
             }
         
+        }
+    &:before {
+        @include desktop{
+        content: '\f10d';
+        left: -120px;
+        color: $color__text-screen;
+        }
+    }  
+    
+    &:after {
+        @include desktop{
+        content: '\f10e';
+        bottom: 0;
+        right: -110px;
+        color: $color__text-screen;
+        }
+    }
 
 }
 
-
+    
 }
-// article{
 
-//     display: flex;
-//     position: relative;
-//     &:before,
-//     &:after{
-//         font-family: 'FontAwesome';
-//         font-size: 125px;
-//         // position: absolute;
-//         top: 0;
-//         overflow: hidden;
-//         line-height: 125px;
 
-//     }
-
-//     &:before {
-//         content: '\f10d';
-//         left: 0;
-//     }
-
-//     &:after {
-//         content: '\f10e';
-//         bottom: 0;
-//         right: 0;
-//     }
-
-// }
 
 .entry-content{
         margin: 0 4%;
@@ -106,6 +96,7 @@ main{
 /* About Page */
 
 .page{
+
     h1{
         margin: 8% 4%;  
 
@@ -120,6 +111,43 @@ main{
        }  
     }
 }
+
+.page-id-207{
+    @include desktop{
+        position: relative;
+        }
+        
+        &:before,
+        &:after{
+            @include desktop {
+                font-family: 'FontAwesome';
+                font-size: 125px;
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+                line-height: 125px;
+                }
+            
+            }
+        &:before {
+            @include desktop{
+            content: '\f10d';
+            top: 250px;
+            left: 30px;
+            color: $color__text-screen;
+            }
+        }  
+        
+        &:after {
+            @include desktop{
+            content: '\f10e';
+            top: 250px;
+            right: 50px;
+            color: $color__text-screen;
+        }
+    }
+}
+
 
 
 /* All Archives Page */
@@ -143,6 +171,44 @@ main{
        font-size: 18px;
        text-decoration: none;
     }
+}
+
+
+.archive{
+
+    @include desktop{
+    position: relative;
+    }
+    
+    &:before,
+    &:after{
+        @include desktop {
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            line-height: 125px;
+            }
+        
+        }
+    &:before {
+        @include desktop{
+        content: '\f10d';
+        left: -150px;
+        color: $color__text-screen;
+        }
+    }  
+    
+    &:after {
+        @include desktop{
+        content: '\f10e';
+        bottom: 0;
+        right: -130px;
+        color: $color__text-screen;
+        }
+    }
+
 }
 
 /* Catagory Page */
@@ -190,7 +256,7 @@ main{
     }
     main{
         @include desktop{
-            margin: 0 1%;
+            margin: 0 12%;
             font-size: 22px;
         }
     }
@@ -211,6 +277,44 @@ main{
         margin-top: 8%;
     }
  }
+
+
+.form{
+
+    @include desktop{
+    position: relative;
+    }
+    
+    &:before,
+    &:after{
+        @include desktop {
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            line-height: 125px;
+            }
+        
+        }
+    &:before {
+        @include desktop{
+        content: '\f10d';
+        left: 40px;
+        color: $color__text-screen;
+        }
+    }  
+    
+    &:after {
+        @include desktop{
+        content: '\f10e';
+        bottom: 0;
+        right: 60px;
+        color: $color__text-screen;
+        }
+    }
+
+}
 
 
 /* error404 */

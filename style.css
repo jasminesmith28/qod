@@ -691,20 +691,30 @@ body {
     margin: 5% 15%; } }
 
 @media (min-width: 1040px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .home article {
     position: relative; } }
 
 @media (min-width: 1040px) {
-  main:before, main:after {
+  .home article:before, .home article:after {
     font-family: 'FontAwesome';
     font-size: 125px;
     position: absolute;
     top: 0;
     overflow: hidden;
     line-height: 125px; } }
+
+@media (min-width: 1040px) {
+  .home article:before {
+    content: '\f10d';
+    left: -120px;
+    color: #00cc00; } }
+
+@media (min-width: 1040px) {
+  .home article:after {
+    content: '\f10e';
+    bottom: 0;
+    right: -110px;
+    color: #00cc00; } }
 
 .entry-content {
   margin: 0 4%; }
@@ -742,6 +752,33 @@ body {
     margin: 0 16%;
     font-size: 20px; } }
 
+@media (min-width: 1040px) {
+  .page-id-207 {
+    position: relative; } }
+
+@media (min-width: 1040px) {
+  .page-id-207:before, .page-id-207:after {
+    font-family: 'FontAwesome';
+    font-size: 125px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    line-height: 125px; } }
+
+@media (min-width: 1040px) {
+  .page-id-207:before {
+    content: '\f10d';
+    top: 250px;
+    left: 30px;
+    color: #00cc00; } }
+
+@media (min-width: 1040px) {
+  .page-id-207:after {
+    content: '\f10e';
+    top: 250px;
+    right: 50px;
+    color: #00cc00; } }
+
 /* All Archives Page */
 .archive {
   margin: 0 2%; }
@@ -755,6 +792,32 @@ body {
     margin-right: 4%;
     font-size: 18px;
     text-decoration: none; }
+
+@media (min-width: 1040px) {
+  .archive {
+    position: relative; } }
+
+@media (min-width: 1040px) {
+  .archive:before, .archive:after {
+    font-family: 'FontAwesome';
+    font-size: 125px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    line-height: 125px; } }
+
+@media (min-width: 1040px) {
+  .archive:before {
+    content: '\f10d';
+    left: -150px;
+    color: #00cc00; } }
+
+@media (min-width: 1040px) {
+  .archive:after {
+    content: '\f10e';
+    bottom: 0;
+    right: -130px;
+    color: #00cc00; } }
 
 /* Catagory Page */
 .category a {
@@ -786,7 +849,7 @@ body {
 
 @media (min-width: 1040px) {
   .single main {
-    margin: 0 1%;
+    margin: 0 12%;
     font-size: 22px; } }
 
 /* Submit a Quote Page */
@@ -797,6 +860,32 @@ body {
       margin: 2% 20%; } }
   .form .submit {
     margin-top: 8%; }
+
+@media (min-width: 1040px) {
+  .form {
+    position: relative; } }
+
+@media (min-width: 1040px) {
+  .form:before, .form:after {
+    font-family: 'FontAwesome';
+    font-size: 125px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    line-height: 125px; } }
+
+@media (min-width: 1040px) {
+  .form:before {
+    content: '\f10d';
+    left: 40px;
+    color: #00cc00; } }
+
+@media (min-width: 1040px) {
+  .form:after {
+    content: '\f10e';
+    bottom: 0;
+    right: 60px;
+    color: #00cc00; } }
 
 /* error404 */
 .error404 main {

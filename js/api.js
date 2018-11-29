@@ -2,41 +2,48 @@
 
 
     $(function(){
+
         //fetch a new quote 
-$('#newQuoteButton').on('click', function(event) {
-    event.preventDefault(); 
+        $('#newQuoteButton').on('click', function(event) {
+        event.preventDefault(); 
 
-      $.ajax({
-        method: 'GET',
-        url: api_vars.root_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-        cache: false
-     }).done( function(data) {
-        const post = data.shift();
-        console.log(post);
-        // const postsource = $('source')
-            title = post.title.rendered,
-            content = post.content.rendered,
-            quoteSource = post._qod_quote_source,
-            sourceUrl= post._qod_quote_source_url,
-            slug = post.slug;
+        $.ajax({
+            method: 'GET',
+            url: api_vars.root_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+            cache: false
+        }).done( function(data) {
+            let post = data.shift();
+            console.log(post);
+                title = post.title.rendered,
+                content = post.content.rendered,
+                quoteSource = post._qod_quote_source,
+                sourceUrl= post._qod_quote_source_url,
+                slug = post.slug;
 
-        $('.entry-content').html(content);
-        $('.entry-meta').html('<p> - ' + title + '<p>');
-        $('.source').html('<span class="source"><a href="'+sourceUrl+'">'+quoteSource+'</a></span>');
+            $('.entry-content').html(content);
+            $('.entry-meta').html('<p> - ' + title + '<p>');
+            $('.source').html('<span class="source"><a href="'+sourceUrl+'">'+quoteSource+'</a></span>');
+
+            let url = 'http://localhost:3000/qod/' + post.slug;
+
+
+            history.pushState(null, null, url)
+            
+            window.addEventListener('popstate', function(event) {
+            let LastPage = document.URL;
+            window.location.replace(LastPage);
+            })
 
         });
 
 
-         //display quote source if unavailable 
-
-         //upsate the url usinng history
      });
 
+     $(window).on('popstate', function(){
+         window.location.replace(lastPage);
+     });
 
-     //make the back and forward nav work with the history API 
-
-
-    });
+});
 
     $(function() {
         // Event on submit of the form
