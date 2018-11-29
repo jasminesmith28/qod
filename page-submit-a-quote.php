@@ -27,7 +27,7 @@ get_header(); ?>
 			<input type="text" id="quote-source" />
 			<p>Provide the URL of the quote source. If available.</p>
 			<input type="text" id="quote-source-url" /><br>
-			<input type="submit" value="Submit">
+			<input class="submit" type="submit" value="Submit">
 		 </form>
 		 </section>
 

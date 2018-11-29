@@ -7,7 +7,40 @@ body{
 
 /* Home Page */
 
+.home{
+    main{
+        @include desktop{
+            margin: 5% 15%;
+        }
+    }
+    
+}
+
+
+main{
+    @include desktop{
+    display: flex;
+    position: relative;
+    }
+    @include desktop{
+        &:before,
+        &:after{
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+            line-height: 125px;
+        
+            }
+        
+
+}
+
+
+}
 // article{
+
 //     display: flex;
 //     position: relative;
 //     &:before,
@@ -31,6 +64,7 @@ body{
 //         bottom: 0;
 //         right: 0;
 //     }
+
 // }
 
 .entry-content{
@@ -43,6 +77,18 @@ body{
     
     .entry-meta{
         margin: 0 1% 0 3%;
+
+        p{
+        @include desktop{
+            font-size: 24px;
+            }
+        }
+    }
+
+    span{
+        @include desktop{
+            font-size: 24px;
+        }
     }
 
     p{
@@ -62,6 +108,16 @@ body{
 .page{
     h1{
         margin: 8% 4%;  
+
+        @include desktop{
+            margin: 4% 20%;
+       }
+    }
+    p{
+        @include desktop{
+            margin: 0 16%;
+            font-size: 20px;
+       }  
     }
 }
 
@@ -70,9 +126,97 @@ body{
 
 .archive{
    margin: 0 2%;
+    
+   @include desktop{
+        margin: 0 20%;
+   }
+
+   p{
+    @include desktop{
+        margin: 0;
+     }
+
+}
+
+   a{
+       margin-right:4%;
+       font-size: 18px;
+       text-decoration: none;
+    }
+}
+
+/* Catagory Page */
+
+.category{
+    a{
+        margin-right:0;
+    }
+    h1{
+        border-bottom: white 1px dotted;
+
+    }
+    article{
+        padding-bottom: 4%;
+        border-bottom: white 1px dotted;
+
+    }
+
+}
+
+/* Tag Page */
+.tag{
+    a{
+        margin-right:0;
+    }
+    h1{
+        padding-bottom: 4%;
+        border-bottom: white 1px dotted;
+
+    }
+    article{
+        padding-bottom: 4%;
+        border-bottom: white 1px dotted;
+
+    }
+
+}
+
+/* Single Page */
+
+.single{
+    @include tablet{
+        font-size: 20px;
+
+    }
+    main{
+        @include desktop{
+            margin: 0 1%;
+            font-size: 22px;
+        }
+    }
 }
 
 
-
-
 /* Submit a Quote Page */
+ .form{
+     margin: 0 2%;
+
+     p{
+        @include desktop{
+			margin: 2% 20%;
+		}
+     }
+
+    .submit{
+        margin-top: 8%;
+    }
+ }
+
+
+/* error404 */
+
+.error404{
+    main{
+        margin: 0 2%;
+    }
+}

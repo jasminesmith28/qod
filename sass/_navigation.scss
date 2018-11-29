@@ -31,10 +31,15 @@ a {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		display: flex;
+
+		@include desktop{
+			justify-content: flex-end;
+			margin-right: 5%;
+		}
 	}
 		
 	li {
-		float: left;
 		position: relative;
 		margin: 0 2%;
 	}
@@ -78,15 +83,19 @@ a {
 		margin: 0 2%;
 	}
 
+	@include desktop{
+		justify-content: center;
+	}
+
 	img{
 		width: 300px;
 
-	@include tablet{
-		width: 330px;
-	}
+		@include tablet{
+			width: 400px;
+		}
 
-	@include desktop{
-		width: 750px;
-	}
+		@include desktop{
+			width: 750px;
+		}
 	}
 }

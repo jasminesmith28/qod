@@ -25,12 +25,12 @@ get_header(); ?>
 
 		<div>
 		<h2>Catagories</h2>
-		<?php wp_tag_cloud( array('taxonomy' => 'category','smallest'=> 14, 'largest'=> 14)); ?>
+		<p><?php wp_tag_cloud( array('taxonomy' => 'category', 'smallest' => 14, 'largest' => 14)); ?></p>
 		</div>
 
 		<div>
 		<h2>Tags</h2>
-		<?php wp_tag_cloud(array('smallest' => 15, 'largest' => 15)); ?>
+		<p><?php wp_tag_cloud(array('smallest' => 14, 'largest' => 14)); ?></p>
 		</div>
 		</section>
 

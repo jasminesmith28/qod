@@ -271,6 +271,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-bottom: 1.5rem;
   color: #ffffff; }
+  @media (min-width: 1040px) {
+    p {
+      font-size: 30px; } }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -395,7 +398,6 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
   border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -411,6 +413,20 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
   padding: 3px; }
+  @media (min-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"] {
+      padding: 7px; } }
+  @media (min-width: 1040px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"] {
+      padding: 10px; } }
 
 textarea {
   padding-left: 3px;
@@ -424,7 +440,58 @@ textarea {
   color: #00cc00;
   font-size: .75rem;
   line-height: 1;
-  padding: 1rem 3rem; }
+  padding: 10px 25px; }
+  @media (min-width: 600px) {
+    #submit-quote input {
+      padding: 10px 60px; } }
+  @media (min-width: 1040px) {
+    #submit-quote input {
+      margin: 0 20%; } }
+
+@media (min-width: 1040px) {
+  #submit-quote .submit {
+    margin-top: 2%; } }
+
+#submit-quote #quote {
+  padding: 50px 70px; }
+  @media (min-width: 600px) {
+    #submit-quote #quote {
+      padding: 100px 220px; } }
+  @media (min-width: 1040px) {
+    #submit-quote #quote {
+      padding: 50px 220px;
+      margin: 0 20%; } }
+
+fieldset {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  fieldset label {
+    width: 40%; }
+  fieldset input {
+    border: 2px solid;
+    border-color: #00cc00;
+    border-radius: 3px;
+    background: transparent;
+    color: #00cc00; }
+  fieldset .search-submit {
+    border: none;
+    margin: 0;
+    padding: 0; }
+    fieldset .search-submit:before {
+      font-family: 'FontAwesome';
+      content: '\f002'; }
+      @media (min-width: 600px) {
+        fieldset .search-submit:before {
+          font-size: 20px; } }
+      @media (min-width: 600px) {
+        fieldset .search-submit:before {
+          font-size: 25px; } }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -448,9 +515,17 @@ a {
   .main-navigation ul {
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 1040px) {
+      .main-navigation ul {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        margin-right: 5%; } }
   .main-navigation li {
-    float: left;
     position: relative;
     margin: 0 2%; }
   .main-navigation a {
@@ -490,12 +565,17 @@ a {
           -ms-flex-pack: start;
               justify-content: flex-start;
       margin: 0 2%; } }
+  @media (min-width: 1040px) {
+    .qodlogo {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   .qodlogo img {
     width: 300px; }
     @media (min-width: 600px) {
       .qodlogo img {
-        width: 330px; } }
-    @media (min-width: 1080px) {
+        width: 400px; } }
+    @media (min-width: 1040px) {
       .qodlogo img {
         width: 750px; } }
 
@@ -606,6 +686,26 @@ body {
   background-color: #242323; }
 
 /* Home Page */
+@media (min-width: 1040px) {
+  .home main {
+    margin: 5% 15%; } }
+
+@media (min-width: 1040px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; } }
+
+@media (min-width: 1040px) {
+  main:before, main:after {
+    font-family: 'FontAwesome';
+    font-size: 125px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    line-height: 125px; } }
+
 .entry-content {
   margin: 0 4%; }
 
@@ -617,6 +717,12 @@ body {
       flex-wrap: wrap; }
   .authorSource .entry-meta {
     margin: 0 1% 0 3%; }
+    @media (min-width: 1040px) {
+      .authorSource .entry-meta p {
+        font-size: 24px; } }
+  @media (min-width: 1040px) {
+    .authorSource span {
+      font-size: 24px; } }
   .authorSource p {
     margin: auto; }
 
@@ -627,9 +733,71 @@ body {
 /* About Page */
 .page h1 {
   margin: 8% 4%; }
+  @media (min-width: 1040px) {
+    .page h1 {
+      margin: 4% 20%; } }
+
+@media (min-width: 1040px) {
+  .page p {
+    margin: 0 16%;
+    font-size: 20px; } }
 
 /* All Archives Page */
 .archive {
   margin: 0 2%; }
+  @media (min-width: 1040px) {
+    .archive {
+      margin: 0 20%; } }
+  @media (min-width: 1040px) {
+    .archive p {
+      margin: 0; } }
+  .archive a {
+    margin-right: 4%;
+    font-size: 18px;
+    text-decoration: none; }
+
+/* Catagory Page */
+.category a {
+  margin-right: 0; }
+
+.category h1 {
+  border-bottom: white 1px dotted; }
+
+.category article {
+  padding-bottom: 4%;
+  border-bottom: white 1px dotted; }
+
+/* Tag Page */
+.tag a {
+  margin-right: 0; }
+
+.tag h1 {
+  padding-bottom: 4%;
+  border-bottom: white 1px dotted; }
+
+.tag article {
+  padding-bottom: 4%;
+  border-bottom: white 1px dotted; }
+
+/* Single Page */
+@media (min-width: 600px) {
+  .single {
+    font-size: 20px; } }
+
+@media (min-width: 1040px) {
+  .single main {
+    margin: 0 1%;
+    font-size: 22px; } }
 
 /* Submit a Quote Page */
+.form {
+  margin: 0 2%; }
+  @media (min-width: 1040px) {
+    .form p {
+      margin: 2% 20%; } }
+  .form .submit {
+    margin-top: 8%; }
+
+/* error404 */
+.error404 main {
+  margin: 0 2%; }
